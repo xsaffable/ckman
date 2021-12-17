@@ -102,3 +102,8 @@ func (d *UserController) Logout(c *gin.Context) {
 
 	model.WrapMsg(c, model.SUCCESS, nil)
 }
+
+// 获取登录用户的角色
+func (d *UserController) getLoginUserRole(c *gin.Context) {
+
+}
