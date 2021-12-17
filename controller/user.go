@@ -4,6 +4,7 @@ import (
 	"os"
 	"path"
 	"path/filepath"
+	"strings"
 	"time"
 
 	"github.com/dgrijalva/jwt-go"
@@ -44,7 +45,8 @@ func (d *UserController) Login(c *gin.Context) {
 		return
 	}
 
-	if req.Username != common.DefaultUserName {
+	// 默认配置用户 or 包含.的用户都可以登录
+	if req.Username != common.DefaultUserName && !strings.ContainsAny(req.Username, ".") {
 		model.WrapMsg(c, model.USER_VERIFY_FAIL, nil)
 		return
 	}

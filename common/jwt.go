@@ -6,8 +6,8 @@ import (
 )
 
 var (
-	DefaultUserName   = "ckman"
-	DefaultSigningKey = "change me"
+	DefaultUserName   = "ckman.qunar"
+	DefaultSigningKey = "zi$gVf0"
 )
 
 type JWT struct {
