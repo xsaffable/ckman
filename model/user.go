@@ -8,4 +8,5 @@ type LoginReq struct {
 type LoginRsp struct {
 	Username string `json:"username" example:"ckman"`
 	Token    string `json:"token" example:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"`
+	Role     int32  `json:"role" example:"1"`
 }

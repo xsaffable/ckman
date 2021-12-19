@@ -12,6 +12,7 @@ import (
 	"github.com/housepower/ckman/common"
 	"github.com/housepower/ckman/config"
 	"github.com/housepower/ckman/model"
+	"github.com/housepower/ckman/service/user"
 	"github.com/patrickmn/go-cache"
 )
 
@@ -81,6 +82,7 @@ func (d *UserController) Login(c *gin.Context) {
 	rsp := model.LoginRsp{
 		Username: req.Username,
 		Token:    token,
+		Role:     user.GetUserRoleByUsername(c, req.Username),
 	}
 	TokenCache.SetDefault(token, time.Now().Add(time.Second*time.Duration(d.config.Server.SessionTimeout)).Unix())
 
@@ -101,9 +103,4 @@ func (d *UserController) Logout(c *gin.Context) {
 	}
 
 	model.WrapMsg(c, model.SUCCESS, nil)
-}
-
-// 获取登录用户的角色
-func (d *UserController) getLoginUserRole(c *gin.Context) {
-
 }

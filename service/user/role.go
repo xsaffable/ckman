@@ -11,7 +11,7 @@ const (
 	ORDINARY = "ordinary"
 )
 
-// Role UserRole 定义角色对应的标识
+// Role 定义角色对应的标识
 var Role = map[string]int32{
 	ADMIN:    0,
 	ORDINARY: 1,
@@ -26,8 +26,8 @@ func getUserRole(c *gin.Context, role string) int32 {
 	return Role[ORDINARY]
 }
 
-// 根据用户获取角色
-func getUserRoleByUsername(c *gin.Context, username string) int32 {
+// GetUserRoleByUsername 根据用户获取角色
+func GetUserRoleByUsername(c *gin.Context, username string) int32 {
 	if common.DefaultUserName == username {
 		return getUserRole(c, ADMIN)
 	}
