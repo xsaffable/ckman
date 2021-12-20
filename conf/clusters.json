@@ -1,0 +1,257 @@
+{
+  "clusters": {
+    "ab_cluster": {
+      "version": "21.10.2.15",
+      "cluster": "ab_cluster",
+      "logic_cluster": "",
+      "port": 9000,
+      "isReplica": false,
+      "hosts": [
+        "10.88.134.124",
+        "10.88.134.110"
+      ],
+      "shards": [
+        {
+          "replicas": [
+            {
+              "ip": "10.88.134.124",
+              "hostname": "l-clickhouse15.h.cn5"
+            }
+          ]
+        },
+        {
+          "replicas": [
+            {
+              "ip": "10.88.134.110",
+              "hostname": "l-clickhouse16.h.cn5"
+            }
+          ]
+        }
+      ],
+      "zkNodes": [
+        "10.90.4.219",
+        "10.90.5.19",
+        "10.95.161.34"
+      ],
+      "zkPort": 2181,
+      "zkStatusPort": 8080,
+      "promHost": "127.0.0.1",
+      "promPort": 9090,
+      "user": "ck",
+      "password": "E02057BA7BE0B12855C79CBB57F5D0F7",
+      "path": "",
+      "sshUser": "",
+      "authenticateType": 1,
+      "sshPassword": "",
+      "sshPort": 22,
+      "Storage": null,
+      "MergeTreeConf": null,
+      "UsersConf": {
+        "Users": null,
+        "Profiles": null,
+        "Quotas": null
+      },
+      "mode": "import",
+      "httpPort": 8123,
+      "zooPath": null
+    },
+    "all_cluster": {
+      "version": "21.10.2.15",
+      "cluster": "all_cluster",
+      "logic_cluster": "",
+      "port": 9000,
+      "isReplica": false,
+      "hosts": [
+        "10.88.134.89",
+        "10.88.134.109",
+        "10.88.134.115",
+        "10.88.134.118",
+        "10.88.134.124",
+        "10.88.134.110"
+      ],
+      "shards": [
+        {
+          "replicas": [
+            {
+              "ip": "10.88.134.89",
+              "hostname": "l-clickhouse11.h.cn5"
+            }
+          ]
+        },
+        {
+          "replicas": [
+            {
+              "ip": "10.88.134.109",
+              "hostname": "l-clickhouse12.h.cn5"
+            }
+          ]
+        },
+        {
+          "replicas": [
+            {
+              "ip": "10.88.134.115",
+              "hostname": "l-clickhouse13.h.cn5"
+            }
+          ]
+        },
+        {
+          "replicas": [
+            {
+              "ip": "10.88.134.118",
+              "hostname": "l-clickhouse14.h.cn5"
+            }
+          ]
+        },
+        {
+          "replicas": [
+            {
+              "ip": "10.88.134.124",
+              "hostname": "l-clickhouse15.h.cn5"
+            }
+          ]
+        },
+        {
+          "replicas": [
+            {
+              "ip": "10.88.134.110",
+              "hostname": "l-clickhouse16.h.cn5"
+            }
+          ]
+        }
+      ],
+      "zkNodes": [
+        "10.90.4.219",
+        "10.90.5.19",
+        "10.95.161.34"
+      ],
+      "zkPort": 2181,
+      "zkStatusPort": 8080,
+      "promHost": "127.0.0.1",
+      "promPort": 9090,
+      "user": "ck",
+      "password": "E02057BA7BE0B12855C79CBB57F5D0F7",
+      "path": "",
+      "sshUser": "",
+      "authenticateType": 1,
+      "sshPassword": "",
+      "sshPort": 22,
+      "Storage": null,
+      "MergeTreeConf": null,
+      "UsersConf": {
+        "Users": null,
+        "Profiles": null,
+        "Quotas": null
+      },
+      "mode": "import",
+      "httpPort": 8123,
+      "zooPath": null
+    },
+    "s4r1": {
+      "version": "21.10.2.15",
+      "cluster": "s4r1",
+      "logic_cluster": "",
+      "port": 9000,
+      "isReplica": false,
+      "hosts": [
+        "10.88.134.89",
+        "10.88.134.109",
+        "10.88.134.115",
+        "10.88.134.118"
+      ],
+      "shards": [
+        {
+          "replicas": [
+            {
+              "ip": "10.88.134.89",
+              "hostname": "l-clickhouse11.h.cn5"
+            }
+          ]
+        },
+        {
+          "replicas": [
+            {
+              "ip": "10.88.134.109",
+              "hostname": "l-clickhouse12.h.cn5"
+            }
+          ]
+        },
+        {
+          "replicas": [
+            {
+              "ip": "10.88.134.115",
+              "hostname": "l-clickhouse13.h.cn5"
+            }
+          ]
+        },
+        {
+          "replicas": [
+            {
+              "ip": "10.88.134.118",
+              "hostname": "l-clickhouse14.h.cn5"
+            }
+          ]
+        }
+      ],
+      "zkNodes": [
+        "10.90.4.219",
+        "10.90.5.19",
+        "10.95.161.34"
+      ],
+      "zkPort": 2181,
+      "zkStatusPort": 8080,
+      "promHost": "127.0.0.1",
+      "promPort": 9090,
+      "user": "ck",
+      "password": "E02057BA7BE0B12855C79CBB57F5D0F7",
+      "path": "",
+      "sshUser": "",
+      "authenticateType": 1,
+      "sshPassword": "",
+      "sshPort": 22,
+      "Storage": null,
+      "MergeTreeConf": null,
+      "UsersConf": {
+        "Users": null,
+        "Profiles": null,
+        "Quotas": null
+      },
+      "mode": "import",
+      "httpPort": 8123,
+      "zooPath": null
+    }
+  },
+  "logics": {},
+  "query_history": {
+    "0961f4ee81e31ebc8ac1be8edeaa6aa3": {
+      "Cluster": "s4r1",
+      "CreateTime": "2021-12-17T17:54:55.551146305+08:00",
+      "QuerySql": "select * from tag_beta.label_number limit 10",
+      "CheckSum": "0961f4ee81e31ebc8ac1be8edeaa6aa3"
+    },
+    "55068cd686a842a2bf728dd67755d85b": {
+      "Cluster": "s4r1",
+      "CreateTime": "2021-12-17T21:31:13.258578637+08:00",
+      "QuerySql": "select * from tag.view_htl_flow_listEnter limit 100",
+      "CheckSum": "55068cd686a842a2bf728dd67755d85b"
+    },
+    "5a278dddb2ca9029a9d43325a14249d7": {
+      "Cluster": "s4r1",
+      "CreateTime": "2021-12-17T21:30:56.740942509+08:00",
+      "QuerySql": "select * from tag.view_htl_flow_listEnter limit 10",
+      "CheckSum": "5a278dddb2ca9029a9d43325a14249d7"
+    },
+    "5ef1adb3bf15b92ca0871acc4bf03faf": {
+      "Cluster": "all_cluster",
+      "CreateTime": "2021-12-15T19:51:29.738043176+08:00",
+      "QuerySql": "SELECT * FROM tag.label_number LIMIT 10000",
+      "CheckSum": "5ef1adb3bf15b92ca0871acc4bf03faf"
+    },
+    "ff4ebb21604d0a9686bdc0f44337deac": {
+      "Cluster": "all_cluster",
+      "CreateTime": "2021-12-15T19:51:26.547057626+08:00",
+      "QuerySql": "SELECT * FROM tag.label_number LIMIT 100",
+      "CheckSum": "ff4ebb21604d0a9686bdc0f44337deac"
+    }
+  },
+  "tasks": {}
+}

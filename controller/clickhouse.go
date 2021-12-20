@@ -360,7 +360,7 @@ func (ck *ClickHouseController) CreateDistTableOnLogic(c *gin.Context) {
 		if err = ckService.CreateDistTblOnLogic(&params); err != nil {
 			var exception *client.Exception
 			if errors.As(err, &exception) {
-				if exception.Code == 60  && cluster != conf.Cluster {
+				if exception.Code == 60 && cluster != conf.Cluster {
 					//means local table is not exist, will auto sync schema
 					con, err := repository.Ps.GetClusterbyName(cluster)
 					if err == nil {
@@ -591,7 +591,7 @@ func (ck *ClickHouseController) QueryInfo(c *gin.Context) {
 	query = strings.ReplaceAll(strings.ReplaceAll(strings.TrimRight(strings.TrimSpace(query), ";"), "\n", " "), "\t", " ")
 	if !strings.Contains(strings.ToLower(query), " limit ") &&
 		strings.HasPrefix(strings.ToLower(query), "select") &&
-		!strings.Contains(query, " SETTINGS "){
+		!strings.Contains(query, " SETTINGS ") {
 		query = fmt.Sprintf("%s LIMIT 10000", query)
 	}
 
@@ -621,7 +621,7 @@ func (ck *ClickHouseController) QueryInfo(c *gin.Context) {
 		_ = repository.Ps.UpdateQueryHistory(history)
 	}
 
-	if repository.Ps.GetQueryHistoryCount() > 100 {
+	if repository.Ps.GetQueryHistoryCount() > 10 {
 		earliest, err := repository.Ps.GetEarliestQuery()
 		if err == nil && earliest.CheckSum != "" {
 			_ = repository.Ps.DeleteQueryHistory(earliest.CheckSum)
@@ -982,7 +982,7 @@ func (ck *ClickHouseController) AddNode(c *gin.Context) {
 	for _, ip := range req.Ips {
 		for _, host := range conf.Hosts {
 			if host == ip {
-				err :=  errors.Errorf("node ip %s is duplicate", ip)
+				err := errors.Errorf("node ip %s is duplicate", ip)
 				model.WrapMsg(c, model.ADD_CK_CLUSTER_NODE_FAIL, err)
 				return
 			}
